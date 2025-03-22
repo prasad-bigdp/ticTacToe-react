@@ -1,0 +1,33 @@
+Building Tic Tac Toe game in React
+1. Use react  
+2. Javascript
+3. Tailwind CSS
+step 1: in termial --> npm create vite@latest
+ cd project-name
+npm install
+npm run dev
+goto src-->App.jsx, write basic code "hello world"
+
+step 2: Import tailwind into Project
+Tailwind is css library
+https://tailwindcss.com/docs/installation/using-vite
+      a. npm install tailwindcss @tailwindcss/vite
+      b. Add the @tailwindcss/vite plugin to your Vite configuration.
+
+vite.config.ts
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+   
+      c. write @import "tailwindcss";  in src/index.css
+
+3. strategy: 
+        1. find all lines(rows and columns) , diagonals,
+        2. if all rows same value or if all columns same value or if all diagonal same value then win
+
+
+
